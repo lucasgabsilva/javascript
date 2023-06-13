@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de variáveis</title>
+    <style>
+        body{
+            background-color: white; /*teste*/
+            color: black;
+            font: normal 20pt Arial;
+        }
+    </style>  
+</head>
+
+<body>
+    <h1> Bem vindo a minha primeira calculadora em JS!</h1><!--Comentários em html-->
+ <script>
+    window.alert('Olá, espero que goste do meu site!')
+    var nome = window.prompt("Qual seu nome?")
+    window.alert('É um grande prazer em te conhecer, ' + nome + '!')
+    window.confirm('O que acha de testar uma ferramenta nova que aprendi a implementar no meu site, ' + nome + '?')
+    var n1 = Number.parseFloat(window.prompt('Certo ' + nome + ', por favor, digite um número na caixinha abaixo:'))
+    window.alert('Ah, que ótimo, ' + nome + ', '+ n1 + ' é meu número da sorte!')
+    var n2 = Number.parseFloat(window.prompt('agora, digite mais um número e o site vai somar ele com ' + n1 + ' e apresentar o resultado:'))
+    var s = n1 + n2
+    window.alert('Obrigado pela ajuda, ' +nome+ ', a soma entre ' +n1+ ' e ' +n2+ ' é: ' +s+ '!')//usando concatenação
+    document.write(`Obrigado pela ajuda ${nome}, a soma entre ${n1} e ${n1} é: ${s}!`)//usando template string
+ </script>  
+
+</body>
+</html>
