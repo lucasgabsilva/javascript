@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 04</title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(253, 7, 7);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            text-align: center;
+        }
+        p {
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Olá!</h1>
+    <p>Calculadora básica</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        document.write(`A soma entre ${n1} e ${n2} é igual a: ${s}`)
+    </script>
+</body>
+</html>
