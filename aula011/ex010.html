@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <section>
+        <form action="Verificar">
+            <h1>Sistema de multas</h1>
+            <label for="ivel">Digite a velocidade do carro</label>
+            <input type="number" name="ivel" id="ivel"> km/h <br>
+            <input type="button" value="Verificar" onclick="calcular()">
+            <input type="reset" value="Limpar">
+            <div id="res">
+        </form>
+    </section>
+
+    </div>
+    <script>
+        function calcular(){
+            var txtvel = window.document.getElementById('ivel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtvel.value)
+            if (vel <= 0){
+                res.innerHTML += `<p>Por favor, digite uma velocidade válida.</p>`
+            }
+            else if (vel <= 60){
+                var abaixo = 60 - vel
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> km/h</p>`
+                res.innerHTML += `<p>Você está dentro do limite de velocidade <br> seu veículo estava ${abaixo} km/h abaixo do limite da via</p>`
+            } else {
+                var acima = vel - 60
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> km/h</p>`
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade <br> seu veículo estava ${acima} km/h acima do limite da via</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança</p>`
+        }
+    </script>
+</body>
+</html>
