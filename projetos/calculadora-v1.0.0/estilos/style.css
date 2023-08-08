@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+    background-color: rgb(187, 187, 187);
+}
+
+p {
+    background-color: white;
+    height: 50px;
+    margin: 0px;
+}
+
+main {
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    width: 22vw;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao {
+    width: 30px;
+    height: 40px;
+}
